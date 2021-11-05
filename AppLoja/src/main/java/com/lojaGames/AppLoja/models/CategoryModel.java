@@ -30,7 +30,7 @@ public class CategoryModel {
 	@Size(min = 5, max = 500)
 	private String descriptionCategoria;
 
-	@OneToMany(mappedBy = "category", cascade = CascadeType.REMOVE)
+	@OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
 	@JsonIgnoreProperties("category")
 	private List<ProductModel> product;
 

@@ -1,7 +1,5 @@
 package com.lojaGames.AppLoja.models;
 
-
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -15,23 +13,22 @@ import javax.validation.constraints.Size;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
-@Table(name="tb_product")
+@Table(name = "tb_product")
 public class ProductModel {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idProduct;
-	
+
 	@NotBlank
-	@Size(min=5, max=100)
+	@Size(min = 5, max = 100)
 	private String name;
-	
+
 	@NotNull
 	private float price;
-	
-	@ManyToOne 
+
+	@ManyToOne
 	@JsonIgnoreProperties("product")
-	@Column(name = "fkCategory") 
 	private CategoryModel category;
 
 	public Long getIdProduct() {
@@ -65,6 +62,5 @@ public class ProductModel {
 	public void setCategory(CategoryModel category) {
 		this.category = category;
 	}
-	
-	
+
 }
