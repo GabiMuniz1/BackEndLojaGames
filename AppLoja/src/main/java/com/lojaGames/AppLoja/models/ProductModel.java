@@ -7,12 +7,15 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
+@Table(name="tb_product")
 public class ProductModel {
 	
 	@Id
@@ -20,6 +23,7 @@ public class ProductModel {
 	private Long idProduct;
 	
 	@NotBlank
+	@Size(min=5, max=100)
 	private String name;
 	
 	@NotNull
