@@ -5,6 +5,8 @@ import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import com.lojaGames.AppLoja.models.ProductModel;
+
 @Repository
 public interface ProcductRepository extends JpaRepository<ProductModel, Long>{
 
