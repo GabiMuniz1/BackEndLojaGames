@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.lojaGames.AppLoja.models.CategoryModel;
 import com.lojaGames.AppLoja.models.ProductModel;
 import com.lojaGames.AppLoja.repositories.ProductRepository;
 
