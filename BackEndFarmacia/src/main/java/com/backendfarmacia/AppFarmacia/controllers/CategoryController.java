@@ -15,8 +15,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.backendfarmacia.AppFarmacia.models.CategoryModel;
+import com.backendfarmacia.AppFarmacia.repositories.CategoryRepository;
+
 @RestController
-@RequestMapping("/product")
+@RequestMapping("/category")
 @CrossOrigin("*")
 public class CategoryController {
 

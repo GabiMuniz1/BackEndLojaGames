@@ -7,15 +7,10 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
-/**
- * 
- * @author VITOR ALEX
- * @since 1.0
- */
 
 @Entity
 @Table(name = "tb_product")
@@ -29,12 +24,12 @@ public class ProductModel {
 	@NotBlank
 	private String name;
 	
-	@NotBlank
+	@NotNull
 	private float price;
 	
 	@ManyToOne
 	@JsonIgnoreProperties("product")
-	private Category category;
+	private CategoryModel category;
 
 	
 	
@@ -62,11 +57,11 @@ public class ProductModel {
 		this.price = price;
 	}
 
-	public Category getCategory() {
+	public CategoryModel getCategory() {
 		return category;
 	}
 
-	public void setCategory(Category category) {
+	public void setCategory(CategoryModel category) {
 		this.category = category;
 	}
 	

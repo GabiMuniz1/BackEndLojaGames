@@ -50,11 +50,11 @@ public class CategoryModel {
 		this.name = name;
 	}
 
-	public String getDescriptionCategoria() {
+	public String getDescriptionCategory() {
 		return descriptionCategory;
 	}
 
-	public void setDescriptionCategoria(String descriptionCategory) {
+	public void setDescriptionCategory(String descriptionCategory) {
 		this.descriptionCategory = descriptionCategory;
 	}
 
